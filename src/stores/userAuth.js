@@ -1,0 +1,17 @@
+//## IMPORTS --- --- ---
+import { defineStore } from "pinia";
+import { ref } from "vue";
+
+
+// EXPORTS --- --- ---
+
+export const useUserAuthStore = defineStore(
+  'userAuth',
+  () => {
+    const loginState = ref(true)
+    const toggle = () => loginState.value = !loginState.value
+    const userInfo = {isim: 'monica', soyisim: 'geller', eposta: 'monica@perk.com'}
+    return { loginState, userInfo, toggle }
+  }
+
+)

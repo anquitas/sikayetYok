@@ -1,5 +1,5 @@
 // ## MODULE INFO --- --- ---
-const MODULE_NAME = 'enter module name'
+const MODULE_NAME = 'server info'
 
 
 

@@ -1,10 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-
+import HederPanel from './components/header/HeaderPanel.vue';
 </script>
 
 <template>
-  <h1 class="text-6xl bg-red-400">ŞİKAYET YOK</h1>
+  <HederPanel/>
+  <p>DENEME</p>
   <RouterView />
 </template>
 
