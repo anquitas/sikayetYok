@@ -10,8 +10,11 @@ export const useUserAuthStore = defineStore(
   () => {
     const loginState = ref(true)
     const toggleloginState = () => loginState.value = !loginState.value
-    const userInfo = {isim: 'monica', soyisim: 'geller', eposta: 'monica@perk.com'}
-    return { loginState, userInfo, toggleloginState }
+    const userInfo = {}
+    const loginUser = (loginInfo) => { 
+      userInfo = loginInfo 
+      loginState = true
+    }
+    return { loginState, userInfo, toggleloginState, loginUser }
   }
-
 )

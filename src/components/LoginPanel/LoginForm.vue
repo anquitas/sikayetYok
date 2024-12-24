@@ -26,18 +26,19 @@
 <script setup>
 import IconMail from '@/components/icons/IconMail.vue';
 import IconSifre from '@/components/icons/IconSifre.vue';
-import { CUyeGiris } from '@/functions/GirisYap';
+import { CuyeGiris } from '@/functions/GirisYap';
 import { ref } from 'vue';
+import { useUserAuthStore } from '@/stores/userAuth';
 
 
 const eposta = ref('')
 const parola = ref('')
 const giris_bilgi = () => {
-  return {eposta: eposta.value, parola: parola.value}
+  return {email: eposta.value, parola: parola.value}
 }
 
 const girisIslemi = async () => {
-  console.log( await CUyeGiris(giris_bilgi()))
+  console.log( await CuyeGiris(giris_bilgi()), useUserAuthStore())
 }
 </script>
 

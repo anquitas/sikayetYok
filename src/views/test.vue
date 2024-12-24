@@ -1,10 +1,10 @@
 <template>
-<IsletmeAyarKonuView/>
+<IletisimView/>
 </template>
 
 
 <script setup>
-import IsletmeAyarKonuView from './isletme/IsletmeAyarKonuView.vue';
+import IletisimView from './site/IletisimView.vue';
 
 
 </script>
