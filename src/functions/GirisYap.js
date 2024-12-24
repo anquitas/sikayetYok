@@ -8,8 +8,10 @@ import { SERVER_URL } from "../constants/serverInfo";
 
 
 
+
 // ## CONSTANTS --- --- ---
 const POST_URL = SERVER_URL + '/kullanicilar'
+
 
 const kullanici_bilgi_cikar = (user_object) => {
   const { email, password } = user_object
@@ -17,11 +19,14 @@ const kullanici_bilgi_cikar = (user_object) => {
   return auth_info
 }
 
-const CuyeGiris = async (giris_nesne) => { // test // GET?
+const CuyeGiris = async (giris_nesne, userAuthStore) => { // test // GET?
   const {email, parola} = giris_nesne // deconstruction
-  const urli = SERVER_URL + '/kullanicilar'
+  const urli = SERVER_URL + '/kullanici'
   console.log(urli + '?' + 'email=' + email + '&' + 'parola=' + parola)
   const uyeBilgi = await axios.get(urli + '?' + 'email=' + email + '&' + 'parola=' + parola)
+  if (uyeBilgi) {
+    userAuthStore.loginUser(uyeBilgi)
+  }
   // const uyeBilgi = await axios.get(urli, {params: giris_nesne})
   console.log(uyeBilgi.data)
   return uyeBilgi.data

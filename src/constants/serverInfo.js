@@ -4,7 +4,7 @@ const MODULE_NAME = 'server info'
 
 
 // ## CONSTANTS --- --- ---
-const SERVER_URL = 'http://localhost:4000'
+const SERVER_URL = 'http://localhost:3000'
 
 
 

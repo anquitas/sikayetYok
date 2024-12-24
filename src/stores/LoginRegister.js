@@ -3,11 +3,11 @@ import { ref } from "vue";
 
 
 export const useLoginRegisterStore = defineStore(
-  'LoginRegister',
+  'loginRegister',
   () => {
     const isOpen = ref(false)
-    const toggle = () => loginRegisterModal.value = !loginRegisterModal.value
+    const toggleIsOpen = () => isOpen.value = !isOpen.value
 
-    return {isOpen, toggle}
+    return {isOpen, toggleIsOpen}
   }
 )

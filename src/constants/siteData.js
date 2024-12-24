@@ -49,3 +49,4 @@ const FOOTER_BILGI_2 = [
 ]
 
 // ## EXPORTS --- --- ---
+export { FOOTER_BILGI,FOOTER_BILGI_2}

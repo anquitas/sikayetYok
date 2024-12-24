@@ -1,11 +1,12 @@
 <script setup>
-
+import MainHero from '@/components/site/MainHero.vue';
+import SearchBar from '@/components/site/SearchBar.vue';
 </script>
 
 <template>
   <main>
-    <p>deneme</p>
-    <button class="btn">dont press</button>
-    <div class="min-h-screen bg-blue-400">sdfklnjhdjklfnkldsfnlknklndklfnkl</div>
+    <MainHero>
+      <SearchBar/>
+    </MainHero>
   </main>
 </template>
